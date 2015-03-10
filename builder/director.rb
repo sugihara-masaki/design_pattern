@@ -8,12 +8,10 @@ class Director
   end
 
   def create_building
-    ret = []
-    ret << @builder.start_build
-    ret << @builder.create_roof
-    ret << @builder.create_wall
-    ret << @builder.create_floor
-    ret << @builder.end_build
-    return ret
+    @builder.create_floor
+    @builder.create_room
+    @builder.create_wall
+    @builder.create_next_floor
+    @builder.create_roof
   end
 end

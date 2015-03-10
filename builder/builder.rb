@@ -1,25 +1,32 @@
+require_relative './product.rb'
+
 class Builder
 
   def initialize
+    @house = Product.new
   end
 
   def create_wall
-    '普通の壁を作ります'
+    @house.add_wall('normal')
   end
 
   def create_roof
-    '普通の屋根を作ります'
+    @house.add_roof('normal')
   end
 
   def create_floor
-    '普通の床を作ります'
+    @house.add_floor('normal')
   end
 
-  def start_build
-    '開始します'
+  def create_room
+    @house.add_room
   end
 
-  def end_build
-    '完成です'
+  def create_next_floor
+    @house.add_next_floor
+  end
+
+  def get_house
+    @house
   end
 end

@@ -2,28 +2,15 @@ require_relative './builder.rb'
 
 class JapaneseBuilder < Builder
 
-  def initialize
-  end
-
   def create_wall
-#    '石壁を作ります'
-    wall = []
-    wall << ' |     |'
-    wall << ' |     |'
+    @house.add_wall('ishikabe')
   end
 
   def create_roof
-#    '瓦屋根を作ります'
-    roof = []
-    roof << ' ///|\\\\\\'
-    roof << '////|\\\\\\\\'
-    roof
+    @house.add_roof('kawara')
   end
 
   def create_floor
-#    '畳床を作ります'
-    floor = []
-    floor << '---------'
-    floor
+    @house.add_floor('tatami')
   end
 end
